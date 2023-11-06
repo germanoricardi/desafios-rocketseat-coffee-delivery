@@ -10,6 +10,7 @@ export const NavbarContainer = styled('nav', {
   position: 'fixed',
   width: '1120px',
   margin: '0 auto',
+  background: '$background',
 
   '& .cart-item-count': {
     background: "$yellow-dark",

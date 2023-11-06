@@ -8,7 +8,11 @@ export const HeroBannerContainer = styled('section', {
   justifyContent: 'space-between',
   alignItems: 'center',
   paddingTop: 70,
-  paddingBottom: 70
+  paddingBottom: 70,
+
+  '& h1 + *': {
+    marginTop: '1rem'
+  }
 })
 
 export const HeroItemsContainer = styled('div', {
