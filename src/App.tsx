@@ -1,16 +1,15 @@
-import { ThemeProvider } from "styled-components"
-import { defaultTheme } from "./styles/themes/default"
-import Home from "./pages/Home"
+import { ThemeProvider } from "styled-components";
+import { CartContextProvider } from "./contexts/CartContext";
+import { Router } from "./Router";
+import { GlobalStyle } from "./styles/global";
+import { defaultTheme } from "./styles/themes/default";
 
-function App() {
+export const App = () => (
+  <ThemeProvider theme={defaultTheme}>
+    <GlobalStyle />
 
-  return (
-    <ThemeProvider theme={defaultTheme}>
-      <div id="AppContainer">
-        <Home />
-      </div>
-    </ThemeProvider>
-  )
-}
-
-export default App
+    <CartContextProvider>
+      <Router />
+    </CartContextProvider>
+  </ThemeProvider>
+);

@@ -1,11 +1,33 @@
-import { Navbar } from "../../components";
-import HeroBanner from "./components/HeroBanner";
+import { CoffeeCard } from "../../components/CoffeeCard";
+import { coffeeCollection } from "../../data/coffees";
+import { HomeHero } from "./HomeHero";
+import {
+  CoffeeCards,
+  HomeContainer,
+  HomeInsideContainer,
+  HomeTitle,
+} from "./styles";
 
-const Home = () => {
-  return <>
-    <Navbar />
-    <HeroBanner />
-  </>
+export type CoffeeType = {
+  id: number;
+  categories: string[];
+  title: string;
+  description: string;
+  price: number;
+  image: string;
 }
 
-export default Home;
+export const Home = () => (
+  <HomeContainer>
+    <HomeInsideContainer>
+      <HomeHero />
+      <HomeTitle>Nossos cafés</HomeTitle>
+
+      <CoffeeCards>
+        {coffeeCollection.map(coffee => (
+          <CoffeeCard key={coffee.id} coffee={coffee} />
+        ))}
+      </CoffeeCards>
+    </HomeInsideContainer>
+  </HomeContainer>
+);

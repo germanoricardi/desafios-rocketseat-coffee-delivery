@@ -1,27 +1,44 @@
-# React + TypeScript + Vite
+![Capa da aplicação](./app-cover.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação desenvolvida como desafio da trilha Ignite da [RockeatSeat](https://rocketseat.com.br/?utm_source=aluno&utm_medium=germano-ricardi&utm_campaign=dev_fullstack).
 
-Currently, two official plugins are available:
+Veja a aplicação em produção:
+[https://germano-ricardi-todo-list.vercel.app](https://germano-ricardi-todo-list.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descrição  
 
-## Expanding the ESLint configuration
+A aplicação gerencia um carrinho de compras de uma cafeteria fictícia, que contém as seguintes funcionalidades:
+*   Listagem de produtos (cafés) disponíveis para compra
+*   Adicionar uma quantidade específicas de itens no carrinho
+*   Aumentar ou remover a quantidade de itens no carrinho
+*   Formulário para o usuário preencher o seu endereço
+*   Exibir o total de itens no carrinho no Header
+*   Exibir o valor total da soma de itens no carrinho multiplicados pelo valor
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Apesar de serem poucas as funcionalidades, foram aplicados conceitos como:
+*   Estados
+*   ContextAPI
+*   LocalStorage
+*   Imutabilidade do estado
+*   Listas e chaves no ReactJS
+*   Propriedades
+*   Componentização
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias utilizadas
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+* [x] [NodeJS](https://nodejs.org/en/)
+* [x] [React](https://reactjs.org/)
+* [x] [Vite](https://vitejs.dev/)
+* [x] [TypeScript](https://www.typescriptlang.org/)
+* [x] [Phosphor Icons](https://phosphoricons.com/)  
+
+## Quickstart
+Clone o repositório:
+```sh
+$  git clone https://github.com/germanoricardi/desafios-rocketseat-coffee-delivery.git
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para executar a aplicação Vite:
+```sh
+$  npm install
+$  npm run dev
+```
